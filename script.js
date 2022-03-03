@@ -32,11 +32,27 @@ function milegyen(e, szotarelement){
     temp.innerHTML = `Volume: ${szotarelement.volume.value} ${szotarelement.volume.unit} (Boil volume: ${szotarelement.boil_volume.value} ${szotarelement.boil_volume.unit})` 
 
     temp = document.getElementById("cefre");
-    temp.innerHTML = `Mashing: ${szotarelement.method.mash_temp[0].temp.value}`
-}[
+    temp.innerHTML = `<h2>Mashing:</h2><ul>${szotarelement.method.mash_temp.map(item => `<li>${item.temp.value} ${item.temp.unit}${item.duration == null ? '' : ` for ${item.duration} minutes`}</li>`).join('')}</ul>`
+
+    temp = document.getElementById("erj");
+    temp.innerHTML = `Fermentation ${szotarelement.method.fermentation.temp.value} ${szotarelement.method.fermentation.temp.unit}`
+
+    temp = document.getElementById("twist");
+    temp.innerHTML = `Twist: ${szotarelement.method.twist}`
+
+    temp = document.getElementById("malata");
+}
 
 async function olvaso_fetch(url){
-    let promise = await fetch(url);
-    let promise_json = await promise.json();
+    let response = await fetch(url);
+    if (!response.ok)
+    alert(response.statusText);
+    let promise_json = await response.json();
     return promise_json;
+}
+
+const dom = (str) => {
+    const div = document.createElement('div');
+    div.innerHTML = str;
+    return div.childNodes[0];
 }
