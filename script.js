@@ -63,9 +63,8 @@ function milegyen(e, szotarelement){
     temp = document.getElementById("ertekekdiv");
     temp.innerHTML = `<ul>${szotarelement.abv != null? `<li>Abv: ${szotarelement.abv}</li>`:``}${szotarelement.ibu != null? `<li>Ibu: ${szotarelement.ibu}</li>`:``}${szotarelement.target_fg != null? `<li>Target fg: ${szotarelement.target_fg}</li>`:``}${szotarelement.target_og != null? `<li>Target og: ${szotarelement.target_og}</li>`:``}${szotarelement.ebc != null? `<li>Ebc: ${szotarelement.ebc}</li>`:``}${szotarelement.srm != null? `<li>Srm: ${szotarelement.srm}</li>`:``}${szotarelement.ph != null? `<li>Ph: ${szotarelement.ph}</li>`:``}${szotarelement.attenuation_level != null? `<li>Attenuation level: ${szotarelement.attenuation_level}</li>`:``}</ul>`;
 
-    temp = document.getElementById('image');
-    temp.innerHTML = `<img src="${szotarelement.image_url}" alt="pictre of ${szotarelement.name}">`
-    
+    kep = document.getElementById('image');
+    kep.innerHTML = `<img src="${szotarelement.image_url}" alt="pictre of ${szotarelement.name}" id = "kep">`
     
 }
 
