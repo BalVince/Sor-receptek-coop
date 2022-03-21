@@ -2,7 +2,14 @@
     display: flex;
     align-content: center;
     justify-content: center;
-    background-color: lightgray;
+    background-color:cadetblue;
+    border-color: lightslategrey;
+    border-style: outset;
+    border-width: 5pt;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: larger;
 }
 #header_element{
     padding: 5pt;
@@ -15,19 +22,29 @@
 #buttondiv{
     width: 10%;
     justify-content: center;
+    border-color: lightslategrey;
+    border-style: outset;
+    border-width: 5pt;
 }
 #maindiv{
     width: 70%;
     padding: 10pt;
 }
 #image{
-    max-width: 20%;
-    justify-items: right;
+    width: 20%;
 }
 .button{
     width: 100%;
     padding: 5pt;
+    height: 4%;
 }
 #kep{
     max-width: 100%;
+    /*outline-color: lightgray;
+    outline-width: 5pt;
+    outline-style: outset;*/
+    padding: 5pt;
+    border-color: lightslategrey;
+    border-style: outset;
+    border-width: 5pt;
 }
